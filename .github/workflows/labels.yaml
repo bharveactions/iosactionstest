@@ -6,7 +6,7 @@ on:
     - opened
 jobs:
   label_issues:
-    runs-on: Ubuntu-latest
+    runs-on: ubuntu-latest
     permissions:
       issues: write
     steps:
@@ -17,7 +17,7 @@ jobs:
               issue_number: context.issue.number,
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                labels: ["triage"]
+                labels: ["this works"]
               })
       
   
