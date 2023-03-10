@@ -10,5 +10,4 @@ struct Print: View {
 }
 
 func TestFunc() {
-  
 }
