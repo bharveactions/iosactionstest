@@ -18,5 +18,5 @@ jobs:
                 "title": "Automated issue for commit: ${{ github.event_name }}",
                 "body": "This issue was automatically created by the GitHub Action workflow **${{ github.workflow }}**. \n\n The commit hash was: _${{ github.sha }}_."
                 }' \
-                "label": "Bug" \
+                "label": "bug" \
               --fail
