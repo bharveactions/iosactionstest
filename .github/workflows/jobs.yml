@@ -1,0 +1,39 @@
+name: Doing Multiple Jobs
+
+on:
+  issues: 
+  - opened
+
+jobs:
+  first_job:
+      name: Comment
+      if: github.event.label.name == 'this works'
+      runs-on: ubuntu-latest
+      permissions:
+        issues: write
+      steps:
+        - name: Add comment
+          uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
+          with:
+            issue-number: ${{ github.event.issue.number }}
+            body: This issue is no longer available for comment
+  second_job:
+    needs: first_job
+    name: Close
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+    - name: Closing Issue
+      run: |
+        curl -L \
+        -X PUT \
+        -H "Accept: application/vnd.github+json" \
+        -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}"\
+        -H "X-GitHub-Api-Version: 2022-11-28" \
+        https://api.github.com/repos/OWNER/REPO/issues/ISSUE_NUMBER/lock \
+        -d '{"lock_reason":"off-topic"}'
+    
+    
+    
+  
