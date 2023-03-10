@@ -5,7 +5,8 @@ on:
     types:
       - opened
 jobs:
-  label_issues:
+  first_job:
+    name: Label
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -19,3 +20,10 @@ jobs:
                 repo: context.repo.repo,
                 labels: ["this works"]
               })
+  second_job:
+    name: Closed
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - use: 
