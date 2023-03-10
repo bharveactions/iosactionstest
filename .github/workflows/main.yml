@@ -6,7 +6,7 @@ jobs:
   create_issues:
     runs-on: Ubuntu-latest
     permissions:
-      write
+      issues: write
     steps:
       - name: Created issue from RESTAPI
         run: |
