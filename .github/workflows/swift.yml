@@ -20,3 +20,6 @@ jobs:
       run: swift build -v
     - name: Run tests
       run: swift test -v
+      
+# TODO: Add secrets and p12 for testflight compat.
+
