@@ -17,13 +17,16 @@ jobs:
               read -a strarr <<< $REPO_FULLNAME
               REPO_SHORTNAME=${strarr[1]}
               IFS=$"\n"
+              
+          - name: Clone git
+            run: |
               echo "### Clone git remote..."
               echo $REPO_FULLNAME
               echo "git clone https://$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git"
               git clone https://@github.com/bharveactions/iosactionstest.git
               echo "### Getting branch"
               BRANCH=${GITHUB_REF#*refs/heads/}
-              echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
+              echo "### $BRANCH ($GITHUB_REF )"
               git checkout $BRANCH
               cd $REPO_SHORTNAME
               echo "### Login into git..."
