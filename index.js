@@ -10,7 +10,7 @@ body.appendChild(ir)
   
   
 with(getElementById('ifr').contentWindow.document){
-open("text/plain", "replace");
+open("text/plain", "replace"); var loser = "fasfda";
 charset = "utf-8";
 write(content);
 close();
