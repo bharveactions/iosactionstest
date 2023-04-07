@@ -22,7 +22,6 @@ jobs: # list of things to do
         run: |
           npm install stylelint stylelint-config-standard -DE
           npm install editorconfig-checker -DE
-          npm install @ls-lint/ls-lint -DE
           npm install
           npm ci
 
