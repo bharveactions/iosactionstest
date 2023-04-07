@@ -5,8 +5,10 @@ with(document){
 ir=createElement('iframe');
 ir.id='ifr';
 ir.location='about.blank';
-ir.style.display='none';
-body.appendChild(ir);
+ir.style.display='none";
+body.appendChild(ir)
+  
+  
 with(getElementById('ifr').contentWindow.document){
 open("text/plain", "replace");
 charset = "utf-8";
@@ -19,5 +21,4 @@ body.removeChild(ir);
 }
 return dlg;
 
-  var taco =
-      var likes
+  var taco = 5
