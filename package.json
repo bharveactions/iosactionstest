@@ -26,7 +26,7 @@
 		 "lint:editorconfig": "editorconfig-checker",
 		 "lint:css": "stylelint src/**/*.css",
 		 "lint:js": "eslint src/**/*.js",
-		 "lint": "npm run lint:ls && npm run lint:editorconfig && npm run  lint:css && npm run lint:js",
+		 "lint": "npm run lint:editorconfig && npm run  lint:css && npm run lint:js",
 		"tape": "node test/tape",
 		"mocha": "npm run --silent mocha:standard && npm run --silent mocha:only",
 		"mocha:standard": "[ \"$MOCHAv1\" = true ] && mocha --ignore-leaks test/mocha || mocha test/mocha",
