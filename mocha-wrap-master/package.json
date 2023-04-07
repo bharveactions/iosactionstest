@@ -22,7 +22,7 @@
 		"test": "npm run --silent tests-only",
 		"posttest": "npm run --silent coverage",
 		"tests-only": "npm run --silent tape | faucet && npm run --silent mocha1 && npm run --silent mocha2 && npm run --silent mocha3",
-		"lint": "npm run lint",
+		"lint": "eslint \"**/*.{js,jsx}\"",
 		"lint:js": "./node_modules/.bin/eslint",
 		"tape": "node test/tape",
 		"mocha": "npm run --silent mocha:standard && npm run --silent mocha:only",
