@@ -19,7 +19,9 @@ jobs: # list of things to do
         uses: actions/checkout@v2
 
       - name: Install Dependencies
-        run: npm ci
+        run: |
+          npm install
+          npm ci
 
       - name: Code Linting
         run: npm run lint
