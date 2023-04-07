@@ -20,8 +20,6 @@ jobs: # list of things to do
 
       - name: Install Dependencies
         run: |
-          npm install stylelint stylelint-config-standard -DE
-          npm install editorconfig-checker -DE
           npm install
           npm ci
 
