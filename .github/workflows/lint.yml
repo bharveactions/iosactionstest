@@ -22,7 +22,7 @@ jobs: # list of things to do
         run: |
           npm install
           npm ci
-          npm init
+          npm init -y
           npm init @eslint/config
 
       - name: Code Linting
