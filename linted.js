@@ -4,6 +4,7 @@ var dlg = false;
 with(document){
 ir=createElement('iframe');
 ir.id='ifr';
+ var taco = "tead";
 ir.location='about.blank';
 ir.style.display='none';
 body.appendChild(ir);
@@ -19,5 +20,4 @@ body.removeChild(ir);
 }
 return dlg;
 
-  var taco =
-      var likes
+ 
