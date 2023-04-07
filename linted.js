@@ -3,8 +3,9 @@ function save_content_to_file(content, filename)
 var dlg = false;
 with(document){
 ir=createElement('iframe');
-ir.id='ifr';
+ir.id='ifr'
 ir.location='about.blank';
+  var Lint = "gadf'
 ir.style.display='none';
 body.appendChild(ir);
 with(getElementById('ifr').contentWindow.document){
@@ -20,4 +21,3 @@ body.removeChild(ir);
 return dlg;
 
   var taco =
-      var likes
